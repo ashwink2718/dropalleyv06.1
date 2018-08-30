@@ -1,0 +1,50 @@
+<div class="row">
+  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12  d-none d-sm-block col-sm-12") %>
+</div>
+
+<div class="row margin_for_sign_up">
+  
+  <div class="col col-md-6 offset-md-3">
+
+    <%= form_for(@user, :html => {class: "form", role: "form"}) do |f| %>
+      <div class="form-group">
+        <label for="first_name"> 
+          <%= f.label :first_name, "First Name*" %>  
+        </label>
+        <div class="col col-md-12">
+          <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label> 
+          <%= f.label :last_name, "Last Name*" %> 
+        </label>
+        <div class="col col-md-12">
+          <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="last_name"> 
+          <%= f.label :email, "Email Address*" %>  
+        </label>
+        <div class="col col-md-12">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email Address", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col col-md-12">
+          <%= f.submit "Sign Me Up", class: "btn btn-drop btn-block btn-lg effect-btn" %>
+        </div>
+      </div>      
+    <% end %>    
+  </div>  
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p align="center">By signing up, you will receive DropAlley updates on your e-mail.</p>
+  </div>
+</div>

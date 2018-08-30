@@ -1,0 +1,86 @@
+<div class="row home_top_margin">
+  <%= image_tag("1_1.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>  
+  <%= image_tag("1_3.jpeg", :class => "col col-md-4 column_width_manager") %>
+  <%= image_tag("2_1.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row">
+  <%= image_tag("1_2.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+  <div class="col col-md-4">
+    <h1 align="center">Try & Buy</h1>
+    <h5 align="center">Sign-up now and get &euro;10 off on your first purchase</h5>
+    <p align="center"> This limited time offer is bound to give you the best shopping experience ever. Try fashion products and then buy them from the convenience of your homes.</p>
+  </div>        
+  <%= image_tag("1_6.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row">
+  <%= image_tag("1_9.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>        
+  <div class="col col-md-2 mt-4">
+    <%= link_to "Sign-up", new_user_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
+  </div>
+  <div class="col col-md-2 mt-4">
+    <%= link_to "Shop Brands", brands_path, class: "btn btn-block btn-trial btn-lg effect-btn" %>
+  </div>
+  <%= image_tag("1_7.jpeg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row mt-5 p-3">
+  <div class="col col-md-12">
+    <h2 class="the_underline" align="center">How It Works</h2>
+  </div>
+</div>
+
+<div class="row mt-3 mb-5">
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">01</h1>
+    <h3 align="center">Discover Products</h3>
+    <p align="center">Look through products across the listed brands by clicking on the Shop Brands link at the top of the page.</p>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">02</h1>
+    <h3 align="center">Select Products</h3>
+    <p align="center">Discover products that you like and copy the url link of the product from your browser's url bar.</p>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">03</h1>
+    <h3 align="center">Request a Trial</h3>
+    <p align="center">Click on the Request a Trial button, fill in your details and the product links that you want a trial for.</p>
+  </div>
+
+</div>
+
+<div class="row mt-5 mb-5">
+   <div class="col col-md-6 offset-md-3">
+     <div class="outerbox_signup p-5 effect1">
+       <div class="innerbox_signup">
+         <h2 align="center">What Are You Waiting For?</h2>
+         <p align="center"> By signing up you will receive the latest updates on what products and brands you can try out before you buy. </p>
+         <%= link_to "Sign Up", new_user_path, class: "btn btn-block btn-lg btn-drop" %>
+       </div>
+     </div>
+   </div> 
+</div>
+
+<footer class="footer">
+  <div class="container-fluid">
+     <div class="row mt-3">
+       <div class="col-md-5">
+         <p class="align-bottom">Copyright &copy 2018 DropAlley. All rights reserved.</p>
+       </div>
+       <div class="col col-md-3 offset-md-4">
+           <%= link_to "https://www.facebook.com/DropAlley/", target: "_blank" do %>
+            <i class="fa fa-facebook"></i>
+           <% end %>
+           <%= link_to "https://www.youtube.com/watch?v=8TfqL3aCGeo", target: "_blank" do %>
+            <i class="fa fa-youtube"></i>
+           <% end %>
+           <%= link_to "https://www.instagram.com/dropalley/", target: "_blank" do %>
+            <i class="fa fa-instagram"></i>
+           <% end %>
+       </div>
+     </div> 
+  </div>
+</footer>
