@@ -4,83 +4,83 @@
 
 <div class="row margin_for_sign_up">
   <div class="col-md-12">
-    <h5 align="center">Personal Information</h5>
+    <h5 align="center">Datos Personales</h5>
   </div>
 </div>
 
 <%= form_for(@order, :html => {class: "form", role: "form"}) do |f| %>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <%= f.text_field :name, class: "form-control", placeholder: "Full Name", autofocus: true %>
+      <%= f.text_field :name, class: "form-control", placeholder: "Nombre y Apellido", autofocus: true %>
     </div>
     <div class="form-group col-md-6">
-      <%= f.email_field :email, class: "form-control", placeholder: "Email ID", autofocus: true %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Correo Electrónico", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">    
     <div class="form-group col-md-3">
-      <%= f.text_field :apartment, class: "form-control", placeholder: "Apartment Number", autofocus: true %>
+      <%= f.text_field :apartment, class: "form-control", placeholder: "Número de Piso", autofocus: true %>
     </div>
     <div class="form-group col-md-6">
-      <%= f.text_field :street_name, class: "form-control", placeholder: "Street Name", autofocus: true %>
+      <%= f.text_field :street_name, class: "form-control", placeholder: "Calle", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :city, class: "form-control", placeholder: "City", autofocus: true %>
+      <%= f.text_field :city, class: "form-control", placeholder: "Ciudad", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     
     <div class="form-group col-md-3">
-      <%= f.text_field :zipcode, class: "form-control", placeholder: "Zip Code", autofocus: true %>
+      <%= f.text_field :zipcode, class: "form-control", placeholder: "Código Postal", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number", autofocus: true %>
+      <%= f.text_field :phone_number, class: "form-control", placeholder: "Número de Móvilr", autofocus: true %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h5 align="center">Product Request Information</h5>
+      <h5 align="center">Información Sobre Productos</h5>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product1, class: "form-control", placeholder: "Product Link", autofocus: true %>
+      <%= f.text_field :product1, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size1, class: "form-control", placeholder: "Size", autofocus: true %>
+      <%= f.text_field :size1, class: "form-control", placeholder: "Talla", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product2, class: "form-control", placeholder: "Product Link", autofocus: true %>
+      <%= f.text_field :product2, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size2, class: "form-control", placeholder: "Size", autofocus: true %>
+      <%= f.text_field :size2, class: "form-control", placeholder: "Talla", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product3, class: "form-control", placeholder: "Product Link", autofocus: true %>
+      <%= f.text_field :product3, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size3, class: "form-control", placeholder: "Size", autofocus: true %>
+      <%= f.text_field :size3, class: "form-control", placeholder: "Talla", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-12">
-      <%= f.text_area :comment, class: "form-control", placeholder: "Special Requests", autofocus: true %>
+      <%= f.text_area :comment, class: "form-control", placeholder: "Solicitudes Especiales", autofocus: true %>
     </div>
   </div>
 
 
 
-  <%= f.submit "Submit my Try & Buy request", class: "btn btn-drop btn-block btn-lg effect-btn mb-5" %>
+  <%= f.submit "Envíe su solicitud de Prueba y Compra", class: "btn btn-drop btn-block btn-lg effect-btn mb-5" %>
 
 <% end %>
