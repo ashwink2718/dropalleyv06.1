@@ -4,4 +4,9 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+ENV["RAILS_MASTER_KEY"]
+
+
+
+
 
