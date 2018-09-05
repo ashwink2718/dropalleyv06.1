@@ -1,16 +1,18 @@
-<div class="row">
-  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12  d-none d-sm-block col-sm-12") %>
+<div class="row mt-5">
+  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12 mt-3 d-none d-sm-block col-sm-12") %>
 </div>
 
 <div class="row margin_for_sign_up">
   <div class="col col-md-6 offset-md-3">
-    <h1 align="center">Gracias por Registrarse</h1>
-    <h3 align="center">Recuerde utilizar su código de descuento SDA10 para recibir &euro;10 de descuento en el precio de su primer intento de compra!</h3>
+    <h1 align="center">Thank You</h1>
+    <h3 align="center">Don't forget to ask for your &euro;10 discount on your first product purchase. Also, trials are free.</h3>
   </div>
 </div>
 
-<div class="row mt-5">
+<div class="row mt-5 bottom_margin">
   <div class="col col-md-6 offset-md-3">
-    <%= link_to "Empezar A Comprar", brands_path, class: "btn btn-lg btn-drop btn-block" %>
+    <%= link_to "Start Shopping", brands_path, class: "btn btn-lg btn-drop btn-block" %>
   </div>
 </div>
+
+<%= render 'layouts/footer' %>

@@ -1,5 +1,5 @@
-<div class="row">
-  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12  d-none d-sm-block col-sm-12") %>
+<div class="row mt-5">
+  <%= image_tag("signupheader1.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12 mt-4 d-none d-sm-block col-sm-12") %>
 </div>
 
 <div class="row margin_for_sign_up">
@@ -9,7 +9,7 @@
     <%= form_for(@user, :html => {class: "form", role: "form"}) do |f| %>
       <div class="form-group">
         <label for="first_name"> 
-          <%= f.label :first_name, "Nombre*" %>  
+          <%= f.label :first_name, "First Name*" %>  
         </label>
         <div class="col col-md-12">
           <%= f.text_field :first_name, class: "form-control", placeholder: "John", autofocus: true %>
@@ -18,7 +18,7 @@
 
       <div class="form-group">
         <label> 
-          <%= f.label :last_name, "Apellido*" %> 
+          <%= f.label :last_name, "Last Name*" %> 
         </label>
         <div class="col col-md-12">
           <%= f.text_field :last_name, class: "form-control", placeholder: "Doe", autofocus: true %>
@@ -27,7 +27,7 @@
 
       <div class="form-group">
         <label for="last_name"> 
-          <%= f.label :email, "Correo Electrónico*" %>  
+          <%= f.label :email, "Email Address*" %>  
         </label>
         <div class="col col-md-12">
           <%= f.email_field :email, class: "form-control", placeholder: "john@gmail.com", autofocus: true %>
@@ -36,7 +36,7 @@
 
       <div class="form-group">
         <div class="col col-md-12">
-          <%= f.submit "Registrarse", class: "btn btn-drop btn-block btn-lg effect-btn" %>
+          <%= f.submit "Sign-up", class: "btn btn-drop btn-block btn-lg effect-btn" %>
         </div>
       </div>      
     <% end %>    
@@ -45,6 +45,8 @@
 
 <div class="row">
   <div class="col-md-12">
-    <p align="center">Regístrese para obtener más información sobre descuentos, ofertas y nuevas marcas para explorar!</p>
+    <p align="center">By signing up, you will receive DropAlley updates to your e-mail.</p>
   </div>
 </div>
+
+<%= render 'layouts/footer' %>

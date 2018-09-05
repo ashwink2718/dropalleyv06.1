@@ -1,86 +1,128 @@
-<div class="row">
-  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12  d-none d-sm-block col-sm-12") %>
+<div class="row mt-5">
+  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12 mt-4 d-none d-sm-block col-sm-12") %>
 </div>
 
+
 <div class="row margin_for_sign_up">
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">01</h1>
+    <h3 align="center">Discover Products</h3>
+    <h4 align="center">Find your favorite brands for Try & Buy</h4>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">02</h1>
+    <h3 align="center">Select Products</h3>
+    <h4 align="center">Select the products you want to try</h4>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">03</h1>
+    <h3 align="center">Request A Trial</h3>
+    <h4 align="center">Fill in your details and paste product links below</h4>
+  </div>
+
+</div>
+
+
+<div class="row mt-5">
   <div class="col-md-12">
-    <h5 align="center">Datos Personales</h5>
+    <h5 align="center">Personal Information</h5>
   </div>
 </div>
 
 <%= form_for(@order, :html => {class: "form", role: "form"}) do |f| %>
-  <div class="form-row">
+  <div class="form-row mt-2">
     <div class="form-group col-md-6">
-      <%= f.text_field :name, class: "form-control", placeholder: "Nombre y Apellido", autofocus: true %>
+      <%= f.text_field :name, class: "form-control", placeholder: "Full Name", autofocus: true %>
     </div>
     <div class="form-group col-md-6">
-      <%= f.email_field :email, class: "form-control", placeholder: "Correo Electrónico", autofocus: true %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">    
-    <div class="form-group col-md-3">
-      <%= f.text_field :apartment, class: "form-control", placeholder: "Número de Piso", autofocus: true %>
-    </div>
     <div class="form-group col-md-6">
-      <%= f.text_field :street_name, class: "form-control", placeholder: "Calle", autofocus: true %>
+      <%= f.text_field :street_name, class: "form-control", placeholder: "Street", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :city, class: "form-control", placeholder: "Ciudad", autofocus: true %>
+      <%= f.text_field :apartment, class: "form-control", placeholder: "Apartment", autofocus: true %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :city, class: "form-control", placeholder: "City", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     
     <div class="form-group col-md-3">
-      <%= f.text_field :zipcode, class: "form-control", placeholder: "Código Postal", autofocus: true %>
+      <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :phone_number, class: "form-control", placeholder: "Número de Móvilr", autofocus: true %>
+      <%= f.text_field :phone_number, class: "form-control", placeholder: "Mobile Number", autofocus: true %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h5 align="center">Información Sobre Productos</h5>
+      <h5 align="center">Product Information</h5>
+    </div>
+  </div>
+
+  <div class="form-row mt-2">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product1, class: "form-control", placeholder: "Product Link", autofocus: true %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size1, class: "form-control", placeholder: "Size", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product1, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
+      <%= f.text_field :product2, class: "form-control", placeholder: "Product Link", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size1, class: "form-control", placeholder: "Talla", autofocus: true %>
+      <%= f.text_field :size2, class: "form-control", placeholder: "Size", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product2, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
+      <%= f.text_field :product3, class: "form-control", placeholder: "Product Link", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size2, class: "form-control", placeholder: "Talla", autofocus: true %>
+      <%= f.text_field :size3, class: "form-control", placeholder: "Size", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-9">
-      <%= f.text_field :product3, class: "form-control", placeholder: "Enlace al Producto", autofocus: true %>
+      <%= f.text_field :product4, class: "form-control", placeholder: "Product Link", autofocus: true %>
     </div>
     <div class="form-group col-md-3">
-      <%= f.text_field :size3, class: "form-control", placeholder: "Talla", autofocus: true %>
+      <%= f.text_field :size4, class: "form-control", placeholder: "Size", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product5, class: "form-control", placeholder: "Product Link", autofocus: true %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size5, class: "form-control", placeholder: "Size", autofocus: true %>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-12">
-      <%= f.text_area :comment, class: "form-control", placeholder: "Solicitudes Especiales", autofocus: true %>
+      <%= f.text_area :comment, class: "form-control", placeholder: "Special Requests", autofocus: true %>
     </div>
   </div>
 
-
-
-  <%= f.submit "Envíe su solicitud de Prueba y Compra", class: "btn btn-drop btn-block btn-lg effect-btn mb-5" %>
+  <%= f.submit "Submit Your Try & Buy Request", class: "btn btn-drop btn-block btn-lg effect-btn mb-5" %>
 
 <% end %>
+
+<%= render 'layouts/footer' %>
