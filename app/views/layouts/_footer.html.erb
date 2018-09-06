@@ -4,7 +4,11 @@
        <div class="col-md-5">
          <p class="align-bottom">Copyright &copy 2018 DropAlley. All rights reserved.</p>
        </div>
+
        <div class="col col-md-3 offset-md-4">
+          <%= mail_to "contact@dropalley.com" do %>
+            <i class="fa fa-envelope"></i>
+           <% end %>
            <%= link_to "https://www.facebook.com/DropAlley/", target: "_blank" do %>
             <i class="fa fa-facebook"></i>
            <% end %>
