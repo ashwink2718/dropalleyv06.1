@@ -1,13 +1,28 @@
 <div class="row brands_top_margin">
 	<div class="jumbotron effect1 jumbobg">
 	  <h1 align="center">Browse Brands</h1>
-	  <p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
-	  <hr class="my-4">
-	  <div class="row">
-	  	<div class="col-md-6 offset-md-3">
-	  		<%= link_to "Request a Try & Buy", new_order_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
-	  	</div>
-	  </div>  
+
+	  <% if logged_in? %>
+
+		  <p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
+		  <hr class="my-4">
+		  <div class="row">
+		  	<div class="col-md-6 offset-md-3">
+		  		<%= link_to "Request a Try & Buy", new_order_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
+		  	</div>
+		  </div>  
+
+		<% else %>
+		
+		  <p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
+		  <hr class="my-4">
+		  <div class="row">
+		  	<div class="col-md-6 offset-md-3">
+		  		<%= link_to "Request a Try & Buy", login_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
+		  	</div>
+		  </div> 
+
+		<% end %>
 
 	</div>
 </div>
