@@ -6,8 +6,11 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @order.save
-    redirect_to orderconfirm_path
+    @order.user = User.first
+    if @order.save
+      flash[:success] = "Order has been placed."
+      redirect_to orderconfirm_path
+    end
   end
 
   private
