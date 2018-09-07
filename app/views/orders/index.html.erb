@@ -1,0 +1,12 @@
+<h1 style="margin-top: 25%;">List of all Try & Buys</h1>
+
+<div>
+	<% @orders.each do |order| %>
+			<div class="row">
+				<div class="col-md-6 mt-5">
+						Order for:<%= order.name %>, Order User: <%= order.user.name %>, Order Placed: <%= order.created_at.to_date %>
+				</div>
+			</div>
+	<% end %>	
+</div>
+
