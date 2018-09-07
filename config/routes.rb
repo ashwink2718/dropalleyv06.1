@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get 'brands', to: 'site#brands'
   get 'thanks', to: 'site#thanks'
   get 'orderconfirm', to: 'site#orderconfirm'
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   resources :users
   resources :orders
