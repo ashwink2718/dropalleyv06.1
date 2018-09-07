@@ -18,14 +18,24 @@
     
       </ul>
       
+      <% if logged_in? %> 
+        
+        <%= link_to "My Orders", orders_path, class: "nav-link links" %>
+             
+      <% end %>
+
       <%= link_to "How It Works", "https://www.youtube.com/watch?v=HL-NPWwXtx8", class: "nav-link links", target: "_blank" %>
       
       <%= link_to "Request A Try & Buy", new_order_path, class: "btn btn-trial effect-btn my-2 my-sm-0" %>
       
       <% if logged_in? %> 
+        
         <%= link_to "Logout", logout_path, method: :delete, class: "nav-link links" %>
+        
       <% else %>
+        
         <%= link_to "Login", login_path, class: "nav-link links" %>
+      
       <% end %>
     </div>
 
