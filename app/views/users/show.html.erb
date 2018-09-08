@@ -1,2 +1,52 @@
-<h1 align="center", style="margin-top: 10%;">Hello <%= @user.name %> ,welcome to your profile</h1>
+<div class="row brands_top_margin">
+	
+	<div class="col-md-6 mt-5">
+		<div class="outerbox_drop1 p-5">
+			<h2 align="center" >Welcome, <%= @user.name %> </h2>	
+		</div>
+	</div>
+
+	<div class="col-md-6 mt-5">
+		<div class="p-5 align-self-start">
+			<h5>Your dashboard will give you your order history, and other exciting fashion news tailored just for you.</h5>
+		</div>
+	</div>
+
+</div>
+
+<div class="row mt-5">
+	<div class="col-md-12">
+		<h1>My Orders</h1>
+		<hr>
+	</div>
+</div>
+
+<div class="row mb-5">
+	<% @user_orders.each do |order| %>
+				<div class="col-md-6 mt-3">
+					<div class="outerbox_orderlist p-3">
+						<div class="row">
+							<div class="col-md-2">
+								<i class="status_icon fa fa-<%= order.status_icon %>"></i>	
+							</div>
+							<div class="col-md-8 align-self-center">
+								<h5>Try & Buy Date: <%= DateTime.parse(order.created_at.to_s).strftime("%a %d %b %Y") %> </h5>	
+							</div>
+						</div>
+						<hr>
+						<strong>Order for:</strong> <%= truncate(order.product1 , length: 50) %>
+						<hr>
+						<div align="left">
+							<h4><strong><%= order.status_message %></strong></h4>
+						</div>
+					</div>
+				</div>
+	<% end %>	
+</div>
+	
+
+</div>
+
+<%= render 'layouts/footer' %>
+	
 

@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit,:update,:show]
+  before_action :require_same_user
+
+  def index
+    redirect_to root_path
+  end
 
   def new
     @user = User.new    
@@ -7,8 +12,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
-    redirect_to thanks_path
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to thanks_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -36,4 +45,12 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def require_same_user
+      if current_user != @user
+        flash[:danger] = "You can only view your own profile"  
+        redirect_to root_path
+      end
+    end
 end
+
+

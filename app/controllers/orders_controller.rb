@@ -1,9 +1,13 @@
 class OrdersController < ApplicationController
+  before_action :require_user 
 
   def index
-    @orders = Order.all
+    if !logged_in?
+      redirect_to root_path
+    else
+      @orders = Order.all
+    end
   end
-
 
   def new
     @order = Order.new
