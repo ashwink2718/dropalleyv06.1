@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_08_210819) do
+ActiveRecord::Schema.define(version: 2018_09_08_215443) do
+
+  create_table "brands", force: :cascade do |t|
+    t.string "brand_name"
+    t.string "image"
+    t.string "brand_link"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
