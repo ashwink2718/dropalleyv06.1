@@ -32,6 +32,9 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'rails_admin', '~> 1.3'
 
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
+
 gem 'listen', '>= 3.0.5', '< 3.2'
 
 # Use ActiveStorage variant

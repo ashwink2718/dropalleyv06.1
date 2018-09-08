@@ -1,4 +1,11 @@
 <div class="row brands_top_margin">
+	<div align="center" class="col-md-4 offset-md-4">
+		<%= image_tag @user.image.url, class: "profile_img" %>
+	</div>
+</div>
+
+
+<div class="row">
 	
 	<div class="col-md-6 mt-5">
 		<div class="outerbox_drop1 p-5">
@@ -6,9 +13,9 @@
 		</div>
 	</div>
 
-	<div class="col-md-6 mt-5">
+	<div class="col-md-6">
 		<div class="p-5 align-self-start">
-			<h5>Your dashboard will give you your order history, and other exciting fashion news tailored just for you.</h5>
+			<h4 align="center"> Your DropAlley dashboard is your very own special area on the app. You can check your order history, status, and also get the latest recommendations and news.</h4>
 		</div>
 	</div>
 
@@ -21,31 +28,48 @@
 	</div>
 </div>
 
-<div class="row mb-5">
-	<% @user_orders.each do |order| %>
-				<div class="col-md-6 mt-3">
-					<div class="outerbox_orderlist p-3">
-						<div class="row">
-							<div class="col-md-2">
-								<i class="status_icon fa fa-<%= order.status_icon %>"></i>	
+<% if @user_orders.count == 0 %>
+	
+	<div class="row">
+		<div class="jumbotron effect1 jumbobg">
+	  	<h1 align="center">No Orders</h1>
+
+	  	<p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
+		  <hr class="my-4">
+		  <div class="row">
+		  	<div class="col-md-6 offset-md-3">
+		  		<%= link_to "Request a Try & Buy", new_order_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+
+<% else %> 
+
+	<div class="row mb-5">
+		<% @user_orders.each do |order| %>
+					<div class="col-md-6 mt-3">
+						<div class="outerbox_orderlist p-3">
+							<div class="row">
+								<div class="col-md-2">
+									<i class="status_icon fa fa-<%= order.status_icon %>"></i>	
+								</div>
+								<div class="col-md-8 align-self-center">
+									<h5>Try & Buy Date: <%= DateTime.parse(order.created_at.to_s).strftime("%a %d %b %Y") %> </h5>	
+								</div>
 							</div>
-							<div class="col-md-8 align-self-center">
-								<h5>Try & Buy Date: <%= DateTime.parse(order.created_at.to_s).strftime("%a %d %b %Y") %> </h5>	
+							<hr>
+							<strong>Order for:</strong> <%= truncate(order.product1 , length: 40) %>
+							<hr>
+							<div align="left">
+								<h4><strong><%= order.status_message %></strong></h4>
 							</div>
-						</div>
-						<hr>
-						<strong>Order for:</strong> <%= truncate(order.product1 , length: 50) %>
-						<hr>
-						<div align="left">
-							<h4><strong><%= order.status_message %></strong></h4>
 						</div>
 					</div>
-				</div>
-	<% end %>	
-</div>
-	
+		<% end %>	
+	</div>
 
-</div>
+<% end %>
 
 <%= render 'layouts/footer' %>
 	

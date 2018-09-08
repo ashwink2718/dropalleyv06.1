@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_08_180925) do
+ActiveRecord::Schema.define(version: 2018_09_08_210819) do
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2018_09_08_180925) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.string "status_message"
-    t.string "status_icon"
+    t.string "status_message", default: "Order Received. Awaiting Confirmation"
+    t.string "status_icon", default: "envelope-open"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_09_08_180925) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "name"
+    t.string "image"
   end
 
 end
