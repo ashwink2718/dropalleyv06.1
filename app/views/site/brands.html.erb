@@ -4,23 +4,34 @@
 
 	  <% if logged_in? %>
 
-		  <p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
+		  <p class="lead" align="center">Shop at your favorite brands. When you know what you'd like to try, copy/paste the product link via the request button below.</p>
 		  <hr class="my-4">
 		  <div class="row">
 		  	<div class="col-md-6 offset-md-3">
 		  		<%= link_to "Request a Try & Buy", new_order_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
 		  	</div>
-		  </div>  
+		  </div>
+		  <div class="row mt-4">
+		  	<div align="center" class="col-md-12">
+		  		<p>*Note: No purchase is made at this point! Make sure not to purchase on the retailer's site. You can purchase products through our delivery representative after you’ve tried them on and decided you want to keep them.</p>
+		  	</div>
+		  </div>
+  
 
 		<% else %>
 		
-		  <p class="lead" align="center">First, browse your favorite brands' websites. Then, copy the product links and request a trial by clicking on the button below.</p>
+		  <p class="lead" align="center">Shop at your favorite brands. When you know what you'd like to try, copy/paste the product link via the request button below.</p>
 		  <hr class="my-4">
 		  <div class="row">
 		  	<div class="col-md-6 offset-md-3">
 		  		<%= link_to "Request a Try & Buy", login_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
 		  	</div>
-		  </div> 
+		  </div>
+		  <div class="row mt-4">
+		  	<div align="center" class="col-md-12">
+		  		<p>*Note: No purchase is made at this point! Make sure not to purchase on the retailer's site. You can purchase products through our delivery representative after you’ve tried them on and decided you want to keep them.</p>
+		  	</div>
+		  </div>
 
 		<% end %>
 
